@@ -9,8 +9,14 @@ router.get('/', function(req, res, next) {
 
 router.get(/^[\/][\-0-9][0-9]+$/, function(req, res, next) {
   
-  console.log(dateParser.dateParse(req.path.slice(1)));
-  res.render('index', { title: 'Unix Date' });
+  res.json(dateParser.dateParse(req.path.slice(1)));
+  //res.render('index', { title: 'Unix Date' });
+});
+
+router.get(/^[a-z]/, function(req, res, next) {
+  
+  res.json(dateParser.naturalDateParse(req.path.slice(1)));
+  //res.render('index', { title: 'Unix Date' });
 });
 
 module.exports = router;
