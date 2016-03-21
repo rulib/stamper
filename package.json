@@ -1,0 +1,22 @@
+{
+  "name": "stamper",
+  "version": "1.0.0",
+  "description": "FCC timestamp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rulib/stamper.git"
+  },
+  "keywords": [
+    "timestamp"
+  ],
+  "author": "Will D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rulib/stamper/issues"
+  },
+  "homepage": "https://github.com/rulib/stamper#readme"
+}
