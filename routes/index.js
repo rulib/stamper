@@ -10,13 +10,18 @@ router.get('/', function(req, res, next) {
 router.get(/^[\/][\-0-9][0-9]+$/, function(req, res, next) {
   
   res.json(dateParser.dateParse(req.path.slice(1)));
-  //res.render('index', { title: 'Unix Date' });
 });
 
-router.get(/^[a-z]/, function(req, res, next) {
-  
+router.get(/^[\/][a-z]/, function(req, res, next) {
+  console.log(req.path)
   res.json(dateParser.naturalDateParse(req.path.slice(1)));
-  //res.render('index', { title: 'Unix Date' });
 });
+
+router.get(/^[\/][\-0-9]+[^0-9]+$/, function(req, res, next) {
+  
+  res.json({ "unix": "null", "natural": "null" });
+});
+
+
 
 module.exports = router;

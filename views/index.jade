@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1
+    |Timestamp Microservice
+  p 
+    |Accepts unix timestamp or natural date of format "Month Date, Year" and returns timestamp and natural date in JSON format
+  p
+    |Examples: <br>
+    |/535225363 => {"unix":"535225363","natural":"December 17, 1986"} <br>
+    |/December 19, 2015 => {"unix":1450483200,"natural":"December 19, 2015"}
