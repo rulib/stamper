@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var dateParser = require('unix-date-parser/unix-date-parser.js');
+var dateParser = require('../my_node_modules/unix-date-parser/unix-date-parser.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
