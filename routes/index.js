@@ -12,7 +12,7 @@ router.get(/^[\/][\-0-9][0-9]+$|^[\/][0-9]$/, function(req, res, next) {
   res.json(dateParser.dateParse(req.path.slice(1)));
 });
 
-router.get(/^[\/][a-z]/, function(req, res, next) {
+router.get(/^[\/][a-zA-Z]/, function(req, res, next) {
   console.log("Handling as natural date " + req.path);
   res.json(dateParser.naturalDateParse(req.path.slice(1)));
 });
